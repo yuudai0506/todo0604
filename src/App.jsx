@@ -6,12 +6,19 @@ import './App.css'
 import Greeting from './Greeting'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cnt, setCnt] = useState(0)
+
+  const countup = () => {
+    setCnt(cnt + 1)
+    console.log("押された");
+  }
 
   return (
     <>
       <h1>みだしを書く</h1>
-      <Greeting name="Cyber" Greet="こんにちは" />
+      <Greeting name="Cyber" onClick={countup} Greet="こんにちは" />
+      {cnt}
+      <button >おせ</button>
     </>
   )
 }
